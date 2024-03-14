@@ -10,13 +10,13 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
 
-        Integer userId;
+        Integer id;
 
         while (true) {
             System.out.println("Введите идентификатор пользователя (целое число), которого хотите найти: ");
             try {
-                userId = scanner.nextInt();
-                User user = new UsersList().findUserById(userId);
+                id = scanner.nextInt();
+                User user = new UsersList().findUserById(id);
                 System.out.println(user);
                 break;
             } catch (InputMismatchException | UserNotFoundException e) {
